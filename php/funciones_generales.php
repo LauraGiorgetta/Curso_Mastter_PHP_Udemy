@@ -155,7 +155,7 @@
     #-----------------------------------------------
     echo '<hr>';
     #-----------------------------------------------
-
+    
     /** Contar caracteres de un string
      * @function strlen
      * @param {string}
@@ -165,7 +165,48 @@
     $text2 = '             12345                 ';
     echo '<p>' . strlen($text) . '</p>';
     echo '<p>' . strlen($text2) . '</p>';
+    
+    #-----------------------------------------------
+    echo '<hr>';
+    #-----------------------------------------------
+    
+    /** Encontrar en que posicion empieza una letra/frase
+     * @function strpos
+     * @param {string} string que se va a analizar
+     * @param {string} string a buscar
+     * @return {number} posicion en la que se encuentra
+     */
+    $text = 'La vida es una apuesta, llena de vueltas';
+    echo strpos($text, 'vida');
+    
+    #-----------------------------------------------
+    echo '<hr>';
+    #-----------------------------------------------
 
+    /** Reemplazar palabras de una frase
+     * @fuction str_replace
+     * @param {string} palabla la cual reemplazar
+     * @param {string} palabra por la cual se reemplaza
+     * @param {string} sobre que variable trabajamos
+     */
+    echo '<p>' . str_replace('una apuesta', 'un quini 6', $text) . '</p>';
+
+    #-----------------------------------------------
+    echo '<hr>';
+    #-----------------------------------------------
+    
+    /** Convertir a mayusculas y minusculas
+     * Mayusculas @function strtoupper
+     * Minusculas @function strtolower
+     * @param {string} cadena a convertir
+     * @return {string} cadena convertida a Mayusculas / Minusculas
+     */
+    echo '<p>' . strtoupper($text) . '</p>';
+    echo '<p>' . strtolower($text) . '</p>';
+    
+    #-----------------------------------------------
+    echo '<hr>';
+    #-----------------------------------------------
     ?>
 </body>
 

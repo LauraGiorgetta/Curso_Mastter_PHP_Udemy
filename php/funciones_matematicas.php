@@ -12,15 +12,6 @@
 <body>
     <h1>Funciones predefinidas</h1>
     <?php
-    # Funcion para Debuguear
-    $nombre = 'Laura Giorgetta';
-    var_dump($nombre);
-
-    # Fechas -> date() -- https://www.php.net/manual/es/function.date.php
-    echo '<p>' . date('d-m-Y') . '</p>';
-    # Valor unico que nunca se va a repetir
-    echo '<p>' . time() . '</p>'; 
-
     # Matematicas
 
     /**  Raiz cuadrada

@@ -14,6 +14,9 @@
     <ul>
         <h2>Comidas</h2>
         <?php
+        # PhP puede trabajar con varias etiquetas que se abren y se cierran 
+        # y se sigue ejecutando dentro de la pagina como si nunca se cerraran
+
         $postres = array('Torta de Chocolate', 'Cupcakes', 'Mouse de Chocolate', 'Merengue con Dulce de Leche');
         $comidas = ['Fideos con salsa blanca', 'Ensalada Caesar', 'Milanesa con Pure', 'Guiso de arroz'];
         $laura = [
@@ -57,11 +60,14 @@
             )
         );
         ?>
-        <?php foreach ($alumnos as $alumno) { ?>
-            <li> <span style="font-size: 14pt;"><?= $alumno['nombre'] ?></span> 
+        <?php
+        #Recorremos el array asociativo bidimencional con 2 foreach y los ponemos dentro de unas listas
+        foreach ($alumnos as $alumno) {
+        ?>
+            <li> <span style="font-size: 14pt;"><?= $alumno['nombre'] ?></span>
                 <ul>
                     <?php
-
+                    # $i es el indice o la clave y $dato es el valor
                     foreach ($alumno as $i => $dato) {
                         if ($i == 'nombre') {
                             continue;

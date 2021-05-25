@@ -26,7 +26,7 @@
     <?php
     if (isset($_GET['pedidoPostre'])) {
         $pedidoPostre = $_GET['pedidoPostre'];
-        if (array_search($pedidoPostre, $postres)) {
+        if (array_search($pedidoPostre, $postres) !== false) {
             echo 'Su orden sera atendia pronto';
         } else {
             echo 'Elija un postre del menu o escribalo correctamente';

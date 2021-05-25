@@ -33,23 +33,32 @@
         }
     }
     ?>
+    <?php
+    #Esta funcion recorre un array y crea Li para mostrar el contenido en el html
+    function arrayLi($array)
+    {
+        foreach ($array as $valor) {
+    ?>
+            <li><?= $valor ?></li>
+    <?php
+        }
+    }
+    ?>
 
     <div style="display: flex;">
         <ul>
             <h3>Desordenado</h3>
-            <?php foreach ($postres as $postre) { ?>
-                <li><?= $postre ?></li>
-            <?php } ?>
+            <?php arrayLi($postres) ?>
         </ul>
         <ul>
             <h3>Ordenado</h3>
             <?php
             asort($postres);
-            foreach ($postres as $postre) {
+            arrayLi($postres);
             ?>
-                <li><?= $postre ?></li>
-            <?php } ?>
         </ul>
+
+
     </div>
 
 </body>

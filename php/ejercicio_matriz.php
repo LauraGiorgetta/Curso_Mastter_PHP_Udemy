@@ -22,16 +22,16 @@
         'Deportes' => $deportes
     ];
     ?>
-    <?php foreach ($juegos as $key => $tematica) { ?>
+    <?php foreach ($juegos as $key => $tematica) : ?>
         <section>
             <h2><?= $key ?></h2>
             <ul>
-                <?php foreach ($tematica as $juego) { ?>
+                <?php foreach ($tematica as $juego):  ?>
                     <li><?= $juego ?></li>
-                <?php } ?>
+                <?php endforeach; ?>
             </ul>
         </section>
-    <?php } ?>
+    <?php endforeach; ?>
 
 </body>
 

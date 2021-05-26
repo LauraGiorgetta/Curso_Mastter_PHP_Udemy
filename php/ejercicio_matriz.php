@@ -26,7 +26,7 @@
         <section>
             <h2><?= $key ?></h2>
             <ul>
-                <?php foreach ($tematica as $juego):  ?>
+                <?php foreach ($tematica as $juego) :  ?>
                     <li><?= $juego ?></li>
                 <?php endforeach; ?>
             </ul>

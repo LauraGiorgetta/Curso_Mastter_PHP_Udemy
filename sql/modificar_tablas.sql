@@ -18,3 +18,13 @@ ALTER TABLE users ADD CONSTRAINT uq_email UNIQUE(email);
 -- Borrar columna
 
 ALTER TABLE users DROP website;
+
+-- Agregar varias columnas
+
+ALTER TABLE entradas 
+ADD usuarios_id int not null,
+ADD categorias_id int not null, 
+ADD titulo varchar(100) NOT NULL,
+ADD descripcion MEDIUMTEXT NOT NULL,
+ADD fecha date NOT NULL
+;
